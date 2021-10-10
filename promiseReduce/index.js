@@ -10,9 +10,10 @@ var fn2 = () =>
   });
 
 const promiseReduce = (asyncFunctions, reduce, initialValue) => {
+  let memo = initialValue;
   return asyncFunctions.reduce(
     (prevFn, currentFn) =>
-      prevFn.then(currentFn).then((value) => reduce(initialValue, value)),
+      prevFn.then(currentFn).then((value) => (memo = reduce(memo, value))),
     Promise.resolve()
   );
 };
