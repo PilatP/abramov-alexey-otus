@@ -7,9 +7,9 @@ describe('getPath', () => {
     document.body.innerHTML = `
       <section>
         <div>test</div>
-        <div id="div-id">a text message
-          <p>description</p>
-          <p id="p-id">one more description</p>
+        <div id="div-id" class="div-class1">a text message
+          <p className="p-class1">description</p>
+          <p id="p-id" class="p-class2">one more description</p>
         </div>
       </section>
       <section></section>
