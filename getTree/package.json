@@ -1,0 +1,18 @@
+{
+  "type": "module",
+  "name": "gettree",
+  "version": "1.0.0",
+  "description": "",
+  "main": "getTree.js",
+  "scripts": {
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest --watch"
+  },
+  "author": "Alexey Abramov",
+  "license": "ISC",
+  "jest": {
+    "transform": {}
+  },
+  "devDependencies": {
+    "@types/jest": "^27.0.2"
+  }
+}
