@@ -26,3 +26,5 @@ const processFolder = async (currentFolder, files = [], folders = []) => {
 
   return { files, folders };
 };
+
+console.log(await tree(process.argv[2]));
