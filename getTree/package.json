@@ -5,7 +5,8 @@
   "description": "",
   "main": "getTree.js",
   "scripts": {
-    "test": "NODE_OPTIONS=--experimental-vm-modules jest --watch"
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest --watch",
+    "tree": "node getTree.js"
   },
   "author": "Alexey Abramov",
   "license": "ISC",
