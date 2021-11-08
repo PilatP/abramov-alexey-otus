@@ -9,7 +9,7 @@ const populateFileWithRandomNumbers = (maxSize = 100, done) => {
   const outputStream = fs.createWriteStream('./data/random-file');
 
   outputStream.on('close', () => {
-    done();
+    if (done) done();
   });
   let index = 0;
   while (true) {
@@ -129,9 +129,13 @@ const mergeChunks = (streamsData, outputStream) => {
 
 // clean the tmp dir up
 await cleanup(tmpDir);
-// populate file with random data & split the file up
-// populateFileWithRandomNumbers(100);
-splitFile('./data/random-file', 10 * 1024 * 1024, () => {
-  // merge files into the output file
-  mergeSortedFilesFromDir(tmpDir);
-});
+if (process.argv.includes('prepare')) {
+  // prepare input data
+  // populate file with random data & split the file up
+  populateFileWithRandomNumbers(100);
+} else {
+  splitFile('./data/random-file', 10 * 1024 * 1024, () => {
+    // merge files into the output file
+    mergeSortedFilesFromDir(tmpDir);
+  });
+}
