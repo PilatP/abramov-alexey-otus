@@ -1,8 +1,6 @@
-import { Transform } from 'stream';
 import fs from 'fs';
-import path, { delimiter } from 'path';
+import path from 'path';
 import { FileStream } from './FileStream.js';
-import { v1 as uuid } from 'uuid';
 import { performance } from 'perf_hooks';
 
 const populateFileWithRandomNumbers = (maxSize = 100, done) => {
