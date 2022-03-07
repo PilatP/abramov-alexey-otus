@@ -1,0 +1,9 @@
+<div class="container">
+  <div *ngFor="let i of parseItem(item)">
+    {{ i.value }}
+  </div>
+  <div>
+    <button [routerLink]="[item.id]" [state]="{item}">edit</button
+    ><button (click)="shareService.delete(item)" name="del">del</button>
+  </div>
+</div>
