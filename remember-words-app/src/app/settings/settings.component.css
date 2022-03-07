@@ -1,0 +1,10 @@
+.container {
+  display: flex;
+  flex-flow: column;
+  width: fit-content;
+}
+.label {
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+}

@@ -1,0 +1,11 @@
+<div class="container">
+  <label *ngFor="let item of shareService.langs" for="{{ item }}" class="label">
+    <p>{{ item.key }}</p>
+    <input
+      type="checkbox"
+      name="{{ item.key }}"
+      (change)="onCheck($event)"
+      [checked]="item.value"
+    />
+  </label>
+</div>
