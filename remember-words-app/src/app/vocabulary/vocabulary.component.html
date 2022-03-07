@@ -1,0 +1,13 @@
+<div class="container">
+  <div>
+    <div class="header">
+      <p *ngFor="let lng of shareService.enabledLangs">
+        {{ lng.key }}
+      </p>
+      <p></p>
+    </div>
+    <app-word *ngFor="let item of shareService.words" [item]="item"></app-word>
+    <button routerLink="add">add new word</button>
+  </div>
+  <div><router-outlet></router-outlet></div>
+</div>
