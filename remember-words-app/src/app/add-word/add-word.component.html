@@ -1,0 +1,11 @@
+<form (ngSubmit)="onSubmit()" [formGroup]="form" class="container form">
+  <div *ngFor="let lng of shareService.enabledLangs">
+    <input placeholder="{{ lng.key }}" formControlName="{{ lng.key }}" />
+    <span
+      *ngIf="this.form.controls[lng.key].errors?.['required'] && (this.form.controls[lng.key].dirty || this.form.controls[lng.key].touched)"
+    >
+      {{ lng.key }} is required.
+    </span>
+  </div>
+  <button [disabled]="!isFormValid">Save</button>
+</form>
