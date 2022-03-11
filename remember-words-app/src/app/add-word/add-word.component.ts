@@ -4,10 +4,6 @@ import { ShareService } from '../share.service';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Params } from '@angular/router';
 
-// interface Params {
-//   id: string;
-// }
-
 @Component({
   selector: 'app-add-word',
   templateUrl: './add-word.component.html',
